@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .cen {
+            background-color: aqua;
+            text-align: center;
+        }
+        
+        .zoom {
+            padding: 50px;
+            transition: transform .2s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        .zoom:hover {
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        
+        .zoom1 {
+            padding: 50px;
+            transition: transform .2s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        .zoom1:hover {
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        
+        .zoom2 {
+            padding: 50px;
+            transition: transform .2s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        .zoom2:hover {
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="bea.png" style="width: 8%" ;>
+    <div class="container">
+        <h2 class="cen">Travel</h2>
+        <div id="Carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+                <li data-target="#Carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="tr2.jpg" alt="bike" style="width: 100%;" class="zoom">
+                    <div class="carousel-caption">
+                        <h2>Read More Read Less Button</h2>
+                        <p>This is the bike with red color which looks so damn<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction()" id="myBtn" style="background-color:black;">Read more</button>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="tr1.jpg" alt="bike" style="width: 100%;" class="zoom1">
+                    <div class="carousel-caption">
+                        <h2>Read More Read Less Button</h2>
+                        <p>This is the bike with red color which looks so damn<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction1()" id="myBtn1" style="background-color:black;">Read more</button>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="tr3.jpg" alt="bike" style="width: 100%;" class="zoom2">
+                    <div class="carousel-caption">
+                        <h2>Read More Read Less Button</h2>
+                        <p>This is the bike with red color which looks so damn<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button onclick="myFunction2()" id="myBtn2" style="background-color:black;">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#Carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previ</span>
+            </a>
+            <a class="right carousel-control" href="#Carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Nex</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+
+    function myFunction1() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn1");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+
+    function myFunction2() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn2");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+
+
+
+
+</html>
